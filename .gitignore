@@ -159,7 +159,7 @@ cython_debug/
 
 # Visual Studio Code
 # Uncomment to ignore entire VSCode directory
-# .vscode/
+.vscode/
 
 # Ruff
 .ruff_cache/
