@@ -18,7 +18,7 @@ class Player(CircleShape):
         self.shoot_timer = 0
 
     def draw(self, screen):
-        pygame.draw.polygon(screen, "white", self.triangle(), LINE_WIDTH)
+        pygame.draw.polygon(screen, "yellow1", self.triangle(), LINE_WIDTH)
 
     def triangle(self):
         forward = pygame.Vector2(0, 1).rotate(self.rotation)
