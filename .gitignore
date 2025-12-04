@@ -84,20 +84,20 @@ ipython_config.py
 
 # pipenv
 # Pipfile.lock is often recommended to be tracked but commented here:
-# Pipfile.lock
+Pipfile.lock
 
 # UV
 # uv.lock is often recommended to be tracked but commented here:
-# uv.lock
+uv.lock
 
 # poetry
 # poetry.lock is often recommended to be tracked but commented here:
 # poetry.lock
-# poetry.toml
+poetry.toml
 
 # pdm
 # pdm.lock is often recommended but commented here:
-# pdm.lock
+pdm.lock
 # pdm.toml
 .pdm-python
 .pdm-build/
@@ -175,3 +175,7 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Game state files
+game_state.jsonl
+game_events.jsonl
