@@ -1,6 +1,6 @@
 import random
-
 import pygame
+from typing import ClassVar, Iterable, cast
 from asteroid import Asteroid
 from constants import (
     ASTEROID_KINDS,
@@ -13,6 +13,8 @@ from constants import (
 
 
 class AsteroidField(pygame.sprite.Sprite):
+    containers: ClassVar[Iterable[pygame.sprite.AbstractGroup]]
+
     edges = [
         [
             pygame.Vector2(1, 0),
@@ -37,7 +39,10 @@ class AsteroidField(pygame.sprite.Sprite):
     ]
 
     def __init__(self):
-        pygame.sprite.Sprite.__init__(self, self.containers)
+        pygame.sprite.Sprite.__init__(
+            self,
+            *cast(Iterable[pygame.sprite.AbstractGroup], self.containers),
+        )
         self.spawn_timer = 0.0
 
     def spawn(self, radius, position, velocity):
